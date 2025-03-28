@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhp5r327wyoua"]
+
+[ext_resource type="PackedScene" uid="uid://ca0bhfxtc5y2v" path="res://scenes/Player.tscn" id="1_q6qmk"]
+[ext_resource type="PackedScene" uid="uid://bwp4kcqr1np5i" path="res://scenes/World 1.tscn" id="1_qdckc"]
+[ext_resource type="PackedScene" uid="uid://fquan8w4nh7p" path="res://scenes/GoalCondition.tscn" id="3_0ekcv"]
+[ext_resource type="AudioStream" uid="uid://c2mehm5m5fs2t" path="res://assets/vine-boom.mp3" id="4_8yi0u"]
+
+[node name="Level 1" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_q6qmk")]
+
+[node name="World 1" parent="." instance=ExtResource("1_qdckc")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+light_energy = 10.051
+light_size = 1.0
+omni_range = 31.0035
+
+[node name="GoalCondition" parent="." instance=ExtResource("3_0ekcv")]
+transform = Transform3D(6.83, 0, 0, 0, 6.83, 0, 0, 0, 6.83, 0, -0.384811, 22.2486)
+sceneName = "Win Screen"
+
+[node name="LoseCondition" parent="." instance=ExtResource("3_0ekcv")]
+transform = Transform3D(8.24, 0, 0, 0, 8.24, 0, 0, 0, 8.24, 0.270942, -8.4024, 15.235)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.06339)
+stream = ExtResource("4_8yi0u")
