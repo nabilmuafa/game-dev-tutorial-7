@@ -25,5 +25,5 @@ sceneName = "Win Screen"
 transform = Transform3D(8.24, 0, 0, 0, 8.24, 0, 0, 0, 8.24, 0.270942, -8.4024, 15.235)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.06339)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.11383, 16.0632)
 stream = ExtResource("4_8yi0u")
